@@ -1,0 +1,3 @@
+include README.md
+recursive-include foundation *.py *.js *.css *.html
+global-exclude *.pyc
