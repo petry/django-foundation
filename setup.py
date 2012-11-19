@@ -14,11 +14,7 @@ setup(
     author_email="marcospetry@gmail.com",
     url="https://github.com/petry/django-foundation",
     packages=find_packages(),
-    package_data={
-        'foundation': [
-            'templates/foundation/*.html',
-        ]
-    },
+    include_package_data=True,
     zip_safe=False,
     classifiers=[
                    'Environment :: Web Environment',
