@@ -369,19 +369,22 @@
     if (false === $input.is(':disabled')) {
         input.checked = ((input.checked) ? false : true);
         $element.toggleClass('checked');
+
+        $input.trigger('change');
     }
   };
 
   var toggleRadio = function($element) {
     var $input = $element.prev(),
+        $form = $input.closest('form.custom'),
         input = $input[0];
 
     if (false === $input.is(':disabled')) {
-      $('input:radio[name="' + $input.attr('name') + '"]').each(function () {
-        $(this).next().removeClass('checked');
-      });
-      input.checked = ((input.checked) ? false : true);
-      $element.toggleClass('checked');
+      $form.find('input:radio[name="' + $input.attr('name') + '"]').next().not($element).removeClass('checked');
+      if ( !$element.hasClass('checked') ) {
+        $element.toggleClass('checked');
+      }
+      input.checked = $element.hasClass('checked');
 
       $input.trigger('change');
     }
@@ -406,7 +409,7 @@
   });
 
   $(document).on('click', 'form.custom label', function (event) {
-    var $associatedElement = $('#' + $(this).attr('for')),
+    var $associatedElement = $('#' + $(this).attr('for') + '[data-customforms!=disabled]'),
         $customCheckbox,
         $customRadio;
     if ($associatedElement.length !== 0) {
