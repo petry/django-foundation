@@ -35,7 +35,7 @@
   <div class="row">
     <div class="twelve columns">
       <h2>Welcome to Foundation</h2>
-      <p>This is version <strong>3.0.9</strong> generated on August 15, 2012.</p>
+      <p>This is version <strong>3.2.2</strong> generated on November 10, 2012.</p>
       <hr />
     </div>
   </div>
@@ -164,11 +164,11 @@
   <!-- Included JS Files (Uncompressed) -->
   <!--
   
-  <script src="{{ STATIC_URL }}foundation/javascripts/modernizr.foundation.js"></script>
-  
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.js"></script>
   
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.forms.js"></script>
   
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.reveal.js"></script>
   
@@ -180,8 +180,6 @@
   
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.tabs.js"></script>
   
-  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.forms.js"></script>
-  
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.tooltips.js"></script>
   
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.accordion.js"></script>
@@ -190,12 +188,29 @@
   
   <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.alerts.js"></script>
   
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.topbar.js"></script>
+  
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.joyride.js"></script>
+  
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.clearing.js"></script>
+  
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.foundation.magellan.js"></script>
+  
   -->
   
   <!-- Included JS Files (Compressed) -->
+  <script src="{{ STATIC_URL }}foundation/javascripts/jquery.js"></script>
   <script src="{{ STATIC_URL }}foundation/javascripts/foundation.min.js"></script>
   
   <!-- Initialize JS Plugins -->
   <script src="{{ STATIC_URL }}foundation/javascripts/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+  
 </body>
 </html>
