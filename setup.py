@@ -9,7 +9,7 @@ SOURCE_DIR = os.path.join(ROOT_DIR)
 setup(
     name="django-foundation",
     version="0.1",
-    description="Powerful image management for the Django web framework.",
+    description="Django Integration with foundation front-end.",
     author="Marcos Daniel Petry",
     author_email="marcospetry@gmail.com",
     url="https://github.com/petry/django-foundation",
