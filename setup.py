@@ -1,6 +1,6 @@
 #/usr/bin/env python
-import os
 from setuptools import setup, find_packages
+import os
 
 ROOT_DIR = os.path.dirname(__file__)
 SOURCE_DIR = os.path.join(ROOT_DIR)
@@ -13,7 +13,7 @@ setup(
     author="Marcos Daniel Petry",
     author_email="marcospetry@gmail.com",
     url="https://github.com/petry/django-foundation",
-    license='Apache License 2.0',
+    license='BSD License', 
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
